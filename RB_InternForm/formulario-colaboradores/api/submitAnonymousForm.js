@@ -1,5 +1,4 @@
 const { google } = require('googleapis');
-require('dotenv').config();
 
 const SPREADSHEET_ID = process.env.GOOGLE_SHEET_ID;
 
@@ -60,7 +59,7 @@ module.exports = async (req, res) => {
 
         await sheets.spreadsheets.values.append({
             spreadsheetId: SPREADSHEET_ID,
-            range: 'Sheet1!A:N',
+            range: 'RespostasINTERNAS!A:N',
             valueInputOption: 'USER_ENTERED',
             resource: {
                 values: [rowData],
